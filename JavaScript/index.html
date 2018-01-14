@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Learning Java script</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- <script src="main.js"></script> -->
+</head>
+<body>
+<div class="header">
+	<h1> Learning JavaScript</h1>
+	<p> with Preeti H</p>
+	
+</div>
+<div class="container">
+	<form method="post" action="something.php" name ="myform" onsubmit = "return validateForm">
+	<div>
+		<label> FirstName</label>
+		<input type="text" name="FirstName" id ="firstName">
+	</div>
+	<br>
+
+<div>
+	<label> Last Name</label>
+	<input type="text" name="lastName" id = lastName>
+</div>
+<br>
+<div>
+	<label> background</label>
+	<select name = "background" id= "background">
+		<option value="red"> Red</option>
+		<option value="blue"> Blue</option>
+		<option value=" green"> Green</option>
+	</select>
+</div>
+<br/>
+<input type="submit" value="submit" />
+
+</form>
+</div>
+
+<script>
+
+	function changeBackground(x){
+		console.log(x.value);
+		var body = document.getElementById('heading');
+		body.style.color = x.value;
+
+	}
+ 
+ function validateForm(){
+
+ 	var firstName = document.forms["myForm"]["firstName"].value;
+
+ 	if(firstName == null || firstName == ""){
+ 		alert('FirstName is required"');
+ 		return false;
+ 	}
+
+
+
+ 	if(firstName.length < 3){
+ 		alert(' FirstName must be at least 3 chars');
+ 		return false;
+ 	}
+ }
+
+
+</script>
+
+</body>
+</html>
